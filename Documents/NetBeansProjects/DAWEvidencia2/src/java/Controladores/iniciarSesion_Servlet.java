@@ -9,6 +9,7 @@ import Modelos.Cliente;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -79,7 +80,8 @@ public class iniciarSesion_Servlet extends HttpServlet {
         String contrasena = request.getParameter("pass");
 
         HttpSession session = request.getSession();
-        ArrayList<Cliente> clientes = (ArrayList<Cliente>) session.getAttribute("listaclientes");
+        ServletContext sc = getServletContext();
+        ArrayList<Cliente> clientes = (ArrayList<Cliente>) sc.getAttribute("listaclientes");
         
             for(Cliente c:clientes){
             if(c.getNombreUsuario().equals(usuario) && c.getContrasena().equals(contrasena)){
