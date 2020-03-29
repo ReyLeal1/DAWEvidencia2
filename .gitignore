@@ -1,0 +1,9 @@
+/DAWEvidencia2/dist/
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+/DAWEvidencia2/build/
+/DAWEvidencia2/nbbuild/
+/DAWEvidencia2/dist/
+/DAWEvidencia2/nbdist/
+/DAWEvidencia2/.nb-gradle/
