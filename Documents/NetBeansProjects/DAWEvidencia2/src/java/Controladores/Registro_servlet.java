@@ -9,6 +9,7 @@ import Modelos.Cliente;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import javax.servlet.http.HttpSession;
 public class Registro_servlet extends HttpServlet {
     
     ArrayList clientes = new ArrayList();
-
+   
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -110,7 +111,8 @@ public class Registro_servlet extends HttpServlet {
         
         clientes.add(c1);
         
-        session.setAttribute("listaclientes", clientes);
+        //session.setAttribute("listaclientes", clientes);
+        getServletContext().setAttribute("listaclientes", clientes);
         
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
