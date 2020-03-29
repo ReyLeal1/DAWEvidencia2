@@ -29,7 +29,7 @@
             <th>Nombre de Usuario</th>
             <th>Numero de Cliente</th>
             </tr>
-        <c:forEach var="lista" items="${sessionScope.listaclientes}">
+        <c:forEach var="lista" items="${listaclientes}">
         <tr>
             <td>${lista.nombre}</td>
             <td>${lista.apellido}</td>
